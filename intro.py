@@ -11,6 +11,9 @@ print(os.getcwd())
 
 print(os.__file__)
 
-r = requests.get('www.google.com')
-print(r.status_code)
-print(r.ok)
+try:
+    r = requests.get('https://www.google.com')
+    print(r.status_code)
+    print(r.ok)
+except:
+    print('Could not open url')
